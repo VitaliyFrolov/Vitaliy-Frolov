@@ -1,0 +1,31 @@
+.footer {
+    padding: 50px 0 50px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.title {
+    border-bottom: 1px solid var(--border-color);
+    font-size: 22px;
+}
+
+.item {
+    margin-bottom: 5px;
+}
+
+.link {
+    &:hover {
+        color: var(--main-text-hover-color);
+        background-color: var(--color-yellow);
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,30 @@
+.contactData {
+    margin-bottom: 100px;
+}
+
+.contactData__header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contactData__title {
+    text-align: center;
+}
+
+.contactData__content {
+    max-width: 350px;
+    padding: 20px 0 20px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.contactData__text {
+    &:hover {
+        color: var(--main-text-hover-color);
+        background-color: var(--color-yellow);
+        text-decoration: underline;
+    }
+}

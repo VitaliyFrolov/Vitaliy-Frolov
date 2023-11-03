@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        //light color
+        --color-yellow: #faf87d;
+        --color-lavender: #E6E6FA;
+        --background-color: white;
+        --main-text-color: black;
+        --main-text-hover-color: black;
+        --border-color: black;
+        --svg-color: black;
+        --shadow-color: rgba(71, 74, 81, 0.6);
+        --focus-color: black;
+
+        & p, a, h1, h2, h3, h4 {
+            color: var(--main-text-color);
+        }
+    }
+}

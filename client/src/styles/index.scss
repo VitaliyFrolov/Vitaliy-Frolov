@@ -1,0 +1,48 @@
+@import './reset.scss';
+@import './utils.scss';
+@import './variables.scss';
+@import './colors-theme/light-color.scss';
+@import './colors-theme/dark-color.scss';
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+a:focus-visible {
+    border: 2px solid var(--focus-color);
+    border-radius: 10px;
+}   
+
+.app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--text-size);
+    background-color: var(--background-color);
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.app-header {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.app-content {
+    flex: 1 1 auto;
+    padding: 60px 0 0;
+    overflow: auto;
+    position: relative;
+    z-index: 0;
+}

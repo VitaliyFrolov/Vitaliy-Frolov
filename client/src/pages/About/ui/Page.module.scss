@@ -1,0 +1,146 @@
+.about__header {
+   margin-bottom: 100px;
+}
+
+.header__title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+
+    &_name {
+        margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        text-align: center;
+    }
+}
+
+.header__infoWrapper {   
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.header__img {
+    border-radius: 20px;
+    margin: auto 0 auto 0;
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+
+    &_mobile {
+        display: none;
+
+        @media screen and (max-width: 500px) {
+            display: block;
+            border-radius: 20px ;
+        }
+    }
+}
+
+.header__title {
+    &_name {
+        @media screen and (max-width: 1000px) {
+            text-align: center;
+        }
+    }
+}
+
+.header__text {
+    line-height: var(--text-line-height);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    max-width: 480px;
+    margin-left: auto;
+
+    @media screen and (max-width: 1000px) {
+        text-align: start;
+        margin-right: auto;
+    }
+
+    &_city {
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 1000px) {
+            text-align: center;
+        }   
+    }
+}
+
+.table {
+    margin-top: 60px;
+
+}
+
+.table__list {
+    @media screen and (max-width: 1000px) {
+        text-align: start;
+    }
+}
+
+.table__title {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 1000px) {
+        text-align: center;
+    }
+}
+
+.works__table {
+    &Wrapper {
+        max-width: 300px;
+        padding: 20px 0 20px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+.table__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &_works {
+        padding: 20px 0 20px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+}
+
+.table__text {
+    @media screen and (max-width: 1000px) {
+        text-align: center;
+        margin: 5px;
+    }
+}
+
+.about__outro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.outro__link {
+    &:hover {
+        color: var(--main-text-hover-color);
+        background-color: var(--color-yellow);
+        text-decoration: underline;
+    }
+}
+
+.underline {
+    border-bottom: 3px solid var(--color-yellow);
+}

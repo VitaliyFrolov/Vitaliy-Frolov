@@ -1,0 +1,110 @@
+.header {
+    background-color: var(--background-color);
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px 0 var(--shadow-color);
+    
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+}
+
+.nav {
+    &__mobile {
+        border-bottom: 1px solid;
+        border-color: var(--border-color);
+        justify-content: center;
+        display: none;
+        background-color: var(--background-color);
+        z-index: 1;
+        box-shadow: 0 2px 5px 0px var(--shadow-color);
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: baseline;
+        gap: 30px;
+        
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+
+        &_mobile {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    &__item {
+        text-decoration: underline #63666A;
+        color: var(--header-text-color);
+        font-weight: 600;
+
+        :focus-visible {
+            color: var(--main-text-hover-color);
+            background-color: var(--color-yellow);
+        }
+
+        &_mobile {
+            padding: 10px;
+            color: #63666A;
+            font-weight: 600;
+            text-decoration: underline;
+
+            :focus-visible {
+                color: var(--main-text-hover-color);
+                background-color: var(--color-yellow);
+            }
+        }
+    }
+
+    &__link {
+        &_active {
+            background-color: var(--color-yellow);
+        }
+
+        &:hover {
+            color: var(--main-text-hover-color);
+            background-color: var(--color-yellow);
+        }
+        
+        &_mobile {
+            &:hover {
+                color: var(--main-text-hover-color);
+                background-color: var(--color-yellow);
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        background-color: inherit;
+        border: none;
+        align-items: center;
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+        }
+
+        &:focus-visible {
+            border: 2px solid var(--focus-color);
+            border-radius: 10px;
+        }
+    }
+}

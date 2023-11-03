@@ -1,0 +1,41 @@
+.card {
+    background-color: var(--color-lavender);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+
+    &:hover {
+        bottom: 5px;
+    }
+
+    &:active {
+        top: 0.5px
+    }
+
+    &:focus-visible {
+        border: 2px solid red;
+        background-color: red;
+    }
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__title {
+    font-weight: 700;
+}
+
+.tags {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
