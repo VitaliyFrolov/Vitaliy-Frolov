@@ -1,14 +1,10 @@
 'use client'
 import { FC } from "react";
-import {useTranslations} from 'next-intl';
 import { Container } from "../../Container";
 import { Title } from "../../Title";
-import styles from './Footer.module.scss';
-
+import styles from './Footer.module.scss'
 
 export const Footer: FC = () => {
-    const t = useTranslations('footer');
-
     return (
         <footer className={styles.footer}>
             <Container>
@@ -20,7 +16,7 @@ export const Footer: FC = () => {
                                 tag="h3"
                                 size="l"
                                 >
-                                {t('email')}
+                                    Email
                             </Title>
                         </li>
                         <li className={styles.item}>
@@ -38,7 +34,7 @@ export const Footer: FC = () => {
                             tag="h3"
                             size="l"
                             >
-                                {t('links')}
+                                Links
                             </Title>
                         </li>
                         <li className={styles.item}>

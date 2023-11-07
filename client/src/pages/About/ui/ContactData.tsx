@@ -1,17 +1,14 @@
 'use client'
 import { Title } from '@/shared/ui/Title';
-import { useTranslations } from 'next-intl'
 import styles from './ContactData.module.scss'
 
-export const ContactData = () => {
-    const t = useTranslations('aboutPage');
-
+export default function ContactData() {
     return (
         <section className={styles.contactData}>
             <header className={styles.contactData__header}>
                 <Title className={styles.contactData__title}>
                     <p>
-                        {t('contact-data')}
+                        Contact details
                     </p>
                 </Title>
             </header>
@@ -21,6 +18,7 @@ export const ContactData = () => {
                             <a 
                                 href='https://github.com/VitaliyFrolov'
                                 className={styles.contactData__link}
+                                target="_blank"
                             >
                                 <p className={styles.contactData__text}>
                                     Telegram: @FrolovVii
@@ -33,6 +31,7 @@ export const ContactData = () => {
                             <a 
                                 href='https://github.com/VitaliyFrolov'
                                 className={styles.contactData__link}
+                                target="_blank"
                             >
                                 <p className={styles.contactData__text}>
                                     GitHub: VitaliyFrolov

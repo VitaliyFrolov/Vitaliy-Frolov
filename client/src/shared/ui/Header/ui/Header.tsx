@@ -3,7 +3,6 @@ import { FC, useEffect, useState } from "react";
 import { Container } from "../../Container";
 import { PageURL } from "@/shared/lib/routes";
 import { openMenu } from "../lib/openMenu";
-import { useTranslations } from 'next-intl';  
 import cn from "classnames";
 import Link from "next/link";
 import styles from './Header.module.scss';
@@ -11,7 +10,6 @@ import { Logo } from "../../Logo";
 
 export const Header: FC = () => {
     const [ menu, setMenu ] = useState(false);
-    const t = useTranslations('header');
 
     useEffect(() => {
         const handleKeyDown = (event: any) => {
@@ -37,7 +35,7 @@ export const Header: FC = () => {
                                         className={cn([styles.nav__link])}
                                         tabIndex={2}
                                     >
-                                        {t('home')}
+                                        Home
                                     </Link>
                                 </li>
                                 <li className={styles.nav__item}>
@@ -46,7 +44,7 @@ export const Header: FC = () => {
                                         className={styles.nav__link}
                                         tabIndex={3}
                                     >
-                                        {t('projects')}
+                                        Projects
                                     </Link>
                                 </li>
                                 <li className={styles.nav__item}>
@@ -55,7 +53,7 @@ export const Header: FC = () => {
                                         className={styles.nav__link}
                                         tabIndex={4}
                                     >
-                                        {t('about')}
+                                        About
                                     </Link>
                                 </li>
                             </ul>
@@ -87,7 +85,7 @@ export const Header: FC = () => {
                             className={styles.nav__link_mobile}
                             tabIndex={3}
                         >
-                            {t('home__mobile')}
+                            Home
                         </Link>
                     </li>
                     <li className={styles.nav__item_mobile}>
@@ -96,7 +94,7 @@ export const Header: FC = () => {
                             className={styles.nav__link_mobile}
                             tabIndex={4}
                         >
-                            {t('projects')}
+                            Projects
                         </Link>
                     </li>
                     <li className={styles.nav__item_mobile}>
@@ -105,7 +103,7 @@ export const Header: FC = () => {
                             className={styles.nav__link_mobile}
                             tabIndex={5}
                         >
-                            {t('about')}
+                            About
                         </Link>
                     </li>
                 </ul>

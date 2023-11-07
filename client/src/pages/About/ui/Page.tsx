@@ -1,17 +1,15 @@
 'use client'
 import { useState, useEffect } from "react";
-import { useTranslations } from 'next-intl';
 import { Container } from "@/shared/ui/Container/index";
 import { Title } from "@/shared/ui/Title";
-import { WorkHistory } from "./WorkHistiry";
 import Image from "next/image";
 import Img from '../../../../public/images/VitaliyFrolov.webp';
 import styles from './Page.module.scss';
 import axios from "axios";
-import { ContactData } from "./ContactData";
+import ContactData from "./ContactData";
+import WorkHistory from "./WorkHistiry";
 
 export default function Page () {
-    const t = useTranslations('aboutPage');
     const [ stack, setStack ] = useState<any>([]);
 
     useEffect(() => {
@@ -28,7 +26,7 @@ export default function Page () {
                         className={styles.header__title}
                     >
                         <p>
-                            {t('title')}
+                            About
                         </p>
                     </Title>
                     <div className={styles.header__infoWrapper}>
@@ -36,7 +34,7 @@ export default function Page () {
                             src={Img}
                             width={480}
                             height={480}
-                            alt={t('alt-img')}
+                            alt={'About'}
                             sizes='(max-width:480px) 100vw'
                             className={styles.header__img}
                         />
@@ -44,7 +42,7 @@ export default function Page () {
                             src={Img}
                             width={280}
                             height={280}
-                            alt={t('alt-img')}
+                            alt={'About'}
                             sizes='(max-width:280px) 100vw'
                             className={styles.header__img_mobile}
                         />
@@ -55,14 +53,14 @@ export default function Page () {
                                 size="l"
                             >
                                 <p>
-                                    {t('main-info_title(1/2)')} <span className={styles.underline}>{t('main-info_title(1/2)__underline')}</span>{t('main-info_title(2/2)')}
+                                    I’m <span className={styles.underline}>Vitaliy Frolov</span>, frontend developer
                                 </p>
                             </Title>
                             <p className={styles.header__text_city}>
-                                {t('main-info_title-text')}    
+                                from St. Petersburg.  
                             </p>
                             <p className={styles.header__text}>
-                                {t('main-info-content')}
+                                In the summer of 2022, I connected with web development into my life and am still doing it today. I believe that technology makes people’s lives better and I want to contribute to this. I love with the web and everything connected with it!
                             </p>
                             <div className={styles.table}>
                                 <Title
@@ -71,7 +69,7 @@ export default function Page () {
                                     className={styles.table__title}
                                 >
                                     <p>
-                                        {t('main-info-stack__title')}
+                                        My technology stack
                                     </p>
                                 </Title>
                                 <ul className={styles.table__list}>
@@ -105,8 +103,8 @@ export default function Page () {
                         </article>
                     </div>
                 </header>
-                <WorkHistory />
-                <ContactData />
+               <WorkHistory />
+                <ContactData /> 
                 <div className={styles.about__outro}>
                     <p className={styles.outro__text}>
                         <a
@@ -114,7 +112,7 @@ export default function Page () {
                             className={styles.outro__link}
                             target="_blank" 
                         >
-                            {t('link')}
+                            *Everything you can see on this website was created by me.
                         </a>
                     </p>
                 </div>

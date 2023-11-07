@@ -95,7 +95,11 @@
     }
 
     &__link {
-        text-align: start;
+        text-align: end;
+
+        @media screen and (max-width: 1000px) {
+            text-align: start;
+        }
     }
 }
 

@@ -1,12 +1,10 @@
 'use client'
 import { Container } from '@/shared/ui/Container';
-import {useTranslations} from 'next-intl';
 import { Title } from "@/shared/ui/Title";  
 import styles from './Page.module.scss';
 import ProjectList from "./ProjectList";
 
 export default function Page() {
-    const t = useTranslations('projectsPage');
     return (
         <Container>
            <section className={styles.projects}>
@@ -17,7 +15,7 @@ export default function Page() {
                         className={styles.projects__title}
                     >
                         <p>
-                            {t('title')}
+                            Projects
                         </p>
                     </Title>
                 </header>

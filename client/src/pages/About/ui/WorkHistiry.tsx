@@ -1,7 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
 import { Title } from '@/shared/ui/Title';
-import { useTranslations } from 'next-intl';
 import axios from "axios";
 import styles from './WorkHistory.module.scss';
 
@@ -11,8 +10,7 @@ export interface IAboutProps {
     work_name: string;
 }
 
-export const WorkHistory = () => {
-    const t = useTranslations('aboutPage');
+export default function WorkHistory() {
     const [ works, setWorks ] = useState([]);
 
     useEffect(() => {
@@ -26,7 +24,7 @@ export const WorkHistory = () => {
                     tag="h2"
                     size="m"
                 >
-                    {t('works-title')}
+                    Work history
                 </Title>
             </header>
             <div>

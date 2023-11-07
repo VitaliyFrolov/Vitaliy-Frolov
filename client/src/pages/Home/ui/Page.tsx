@@ -1,7 +1,6 @@
 'use client'
 import { Container } from '@/shared/ui/Container/index';
 import { Title } from '@/shared/ui/Title/index';
-import { useTranslations } from 'next-intl'; 
 import { PageURL } from '@/shared/lib/routes';
 import Image from 'next/image';
 import Img from '../../../../public/images/VitaliyFrolov.webp';
@@ -10,7 +9,6 @@ import Link from 'next/link';
 import ProjectList from '@/pages/Projects/ui/ProjectList';
 
 export default function Page () {
-    const t = useTranslations('homePage');
     return (
         <Container>
             <section className={styles.page}>
@@ -18,13 +16,14 @@ export default function Page () {
                     <header className={styles.header}>
                         <div className={styles.header__textWrapper}>
                             <p className={styles.header__text}>
-                                {t('title-text')}
+                                Hi, my name is
                             </p>
                             <Title
-                            tag="h1"
-                            size="m"
-                            className={styles.header__title}>
-                                {t('title')}
+                                tag="h1"
+                                size="m"
+                                className={styles.header__title}
+                            >
+                                Vitaliy Frolov
                             </Title>
                         </div>
                     </header>
@@ -34,7 +33,7 @@ export default function Page () {
                             object-fit='caver'
                             width={480}
                             height={480}
-                            alt={t('alt-img')}
+                            alt={'Vitaliy Frolov'}
                             sizes='(max-width:480px) 100vw'
                             className={styles.content__img}
                         />  
@@ -42,7 +41,7 @@ export default function Page () {
                             src={Img}
                             width={280}
                             height={280}
-                            alt={t('alt-img')}
+                            alt={'Vitaliy Frolov'}
                             sizes='(max-width:280px) 100vw'
                             className={styles.content__img_mobile}
                         />
@@ -54,22 +53,22 @@ export default function Page () {
                                     size="l"
                                 >
                                     <p className={styles.mainInfo__text}>
-                                        {t('main-info_title')} <span className={styles.underline}>{t('main-info_title__underline')}</span>
+                                        I’m a frontend <span className={styles.underline}>developer</span>
                                     </p>
                                 </Title>
                                 <p className={styles.mainInfo__text}>
-                                    {t('main-info_title-text')}    
+                                    from St. Petersburg.   
                                 </p>
                             </header>
                             <div className={styles.aboutMe}>
                                 <p className={styles.aboutMe__content}>
-                                    {t('main-info-content(1/2)')} <br />
-                                    <span className={styles.bold}>{t('main-info-content(1/2)__underline')}</span> {t('main-info-content(2/2)')}
+                                    In the summer of 2022, I connected with <br />
+                                    <span className={styles.bold}>web development into my life</span> and am still doing it today. I believe that technology makes people’s lives better and I want to contribute to this. I love with the web and everything connected with it!
                                 </p>
                             </div>
                             <div className={styles.aboutMe}>
                                 <p className={styles.aboutMe__link}>
-                                    {t('main info-link__text(1/2)')} <Link className={styles.link} href={PageURL.Projects}><span className={styles.bold}>{t('main info-link__projects')}</span></Link> {t('main info-link__text(2/2)')} <Link className={styles.link} href={PageURL.About}><span className={styles.bold}>{t('main info-link__about')}</span></Link>
+                                    Here you can find <Link className={styles.link} href={PageURL.Projects}><span className={styles.bold}>my projects</span></Link> and learn a some things <Link className={styles.link} href={PageURL.About}><span className={styles.bold}>about me.</span></Link>
                                 </p>
                             </div>
                         </div>
@@ -80,7 +79,7 @@ export default function Page () {
                 <header className={styles.projects__header}>
                     <Title className={styles.projects_title}>
                         <p className={styles.projects__titleText}>
-                            {t('title__projects')}
+                            Projects
                         </p>
                     </Title>
                 </header>
@@ -95,7 +94,7 @@ export default function Page () {
                         className={styles.button}
                     >
                         <p>
-                            {t('btn__projects')}
+                            view all
                         </p>
                     </Link>
                 </div>
