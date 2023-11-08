@@ -10,6 +10,8 @@
         --svg-color: black;
         --shadow-color: rgba(71, 74, 81, 0.6);
         --focus-color: black;
+        --light-logo: block;
+        --dark-logo: none;
 
         & p, a, h1, h2, h3, h4 {
             color: var(--main-text-color);

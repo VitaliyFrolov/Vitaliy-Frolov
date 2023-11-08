@@ -16,7 +16,7 @@ export default function ContactData() {
                     <ul className={styles.contactData__list}>
                         <li className={styles.contactData__item}>
                             <a 
-                                href='https://github.com/VitaliyFrolov'
+                                href='https://t.me/FrolovVii'
                                 className={styles.contactData__link}
                                 target="_blank"
                             >
@@ -41,9 +41,14 @@ export default function ContactData() {
                     </ul>
                     <ul className={styles.contactData_list}>
                         <li className={styles.contactData__item}>
-                            <p className={styles.contactData__text}>
-                                Gmail: vitaliy.frolov.200117@gmail.com
-                            </p>
+                            <a
+                                className={styles.contactData__link}
+                                href="mailto:vitaliy.frolov.200117@gmail.com"
+                            >
+                                <p className={styles.contactData__text}>
+                                    Gmail: vitaliy.frolov.200117@gmail.com
+                                </p>
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -1,14 +1,10 @@
 import { Header } from "@/shared/ui/Header/index";
 import { Footer } from "@/shared/ui/Footer/ui/Footer";
-import '../../styles/index.scss';
-
-export function generateStaticParams() {
-  return [{locale: 'en'}, {locale: 'ru'}];
-}
+import '../styles/index.scss';
 
 export const metadata = {
   title: "Vitaliy Frolov",
-  description: "Hi, I'm Vitaliy, this is my website with web development work."
+  description: "Hi, I'm Vitaliy, this is my website with web development work.",
 }
 
 export default async function RootLayout({

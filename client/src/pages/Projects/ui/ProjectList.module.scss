@@ -24,3 +24,12 @@
         gap: 10px;
     }
 }
+
+.projects__loading {
+    display: flex;
+    justify-content: center;
+}
+
+.loadingCard {
+    color: var(--main-text-color);
+}

@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  server: 
+    build: ./server
+    restart: "always"
+    container_name: "Server"
+    volumes:
+      - /var/lib/docker/volumes/web-portfolio-sqlite/_data
+    ports:
+      - "8000:8000"
+  client:
+    build: ./client
+    restart: "always"
+    container_name: "Client"
+    ports:
+      - "3000:3000"

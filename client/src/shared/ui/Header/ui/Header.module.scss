@@ -54,7 +54,7 @@
     &__item {
         text-decoration: underline #63666A;
         color: var(--header-text-color);
-        font-weight: 600;
+        font-weight: 400;
 
         :focus-visible {
             color: var(--main-text-hover-color);
@@ -64,7 +64,7 @@
         &_mobile {
             padding: 10px;
             color: #63666A;
-            font-weight: 600;
+            font-weight: 400;
             text-decoration: underline;
 
             :focus-visible {

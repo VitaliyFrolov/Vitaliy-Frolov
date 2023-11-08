@@ -11,11 +11,14 @@ export interface IAboutProps {
 }
 
 export default function WorkHistory() {
+    const [ loading, setLoading ] = useState(true);
     const [ works, setWorks ] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/get_works/').then((res) => (setWorks(res.data.works)));
-    }, []);
+        axios.get('http://localhost:8000/api/get_works/').then((res) => {(
+            setWorks(res.data.works));
+            setLoading(false)});
+    }, [loading]);
     
     return (
         <section className={styles.about__works}>
@@ -28,25 +31,26 @@ export default function WorkHistory() {
                 </Title>
             </header>
             <div>
-                {works.map((item: IAboutProps) => (
-                    <div key={item.id} className={styles.works__tableWrapper}>
-                        <ul className={styles.table__list}>
-                            <li className={styles.table__item}>
-                                <p className={styles.stack__text}>
-                                    {item.work_date}
-                                </p>
-                            </li>
-                        </ul>
-                        <ul className={styles.table__list}>
-                            <li className={styles.table__item}>
-                                <p className={styles.table__text}>
-                                    {item.work_name}
-                                </p>
-                            </li>
-                        </ul>
-                    </div>  
-                ))}
+                { loading ? <div className={styles.works__loading}><span className={styles.loadingText}>Loading...</span></div> : <>
+                    {works.map((item: IAboutProps) => (
+                        <div key={item.id} className={styles.works__tableWrapper}>
+                            <ul className={styles.table__list}>
+                                <li className={styles.table__item}>
+                                    <p className={styles.stack__text}>
+                                        {item.work_date}
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul className={styles.table__list}>
+                                <li className={styles.table__item}>
+                                    <p className={styles.table__text}>
+                                        {item.work_name}
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>  
+                    ))} </> }
             </div>
         </section>
     )
-}
+};

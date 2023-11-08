@@ -34,28 +34,32 @@ export default function ProjectList ({sliceMode}: IProjectListMode) {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/get_projects/').then((res) => (setData(res.data.projects)));
-        setLoading(false);
-    }, []); 
+        axios.get('http://localhost:8000/api/get_projects/').then((res) => {(
+            setData(res.data.projects)); 
+            setLoading(false);
+        });
+    }, [loading]); 
 
     return (
         <div className={styles.projects}>
-            <ul className={styles.projects__list}>
-                {data.slice(0, slice).map((item: IProjectListProps) => (
-                    <ProjectCard
-                        key={item.id}
-                        title={item.title}
-                        description={item.description}
-                        url={item.link}
-                        tag_1={item.tag_1}
-                        tag_2={item.tag_2}
-                        tag_3={item.tag_3}
-                        tag_4={item.tag_4}
-                        tag_5={item.tag_5}
-                        tag_6={item.tag_6}
-                    />
-                ))}
-            </ul>
+            { loading ? <div className={styles.projects__loading}><span className={styles.loadingCard}>Loading...</span></div> : 
+                <ul className={styles.projects__list}>
+                    {data.slice(0, slice).map((item: IProjectListProps) => (
+                        <ProjectCard
+                            key={item.id}
+                            title={item.title}
+                            description={item.description}
+                            url={item.link}
+                            tag_1={item.tag_1}
+                            tag_2={item.tag_2}
+                            tag_3={item.tag_3}
+                            tag_4={item.tag_4}
+                            tag_5={item.tag_5}
+                            tag_6={item.tag_6}
+                        />
+                    ))}
+                </ul> }
         </div>
     )
 };
+

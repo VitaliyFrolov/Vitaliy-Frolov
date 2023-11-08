@@ -22,6 +22,7 @@ export const Footer: FC = () => {
                         <li className={styles.item}>
                             <a 
                                 className={styles.link}
+                                href="mailto:vitaliy.frolov.200117@gmail.com"
                             >
                                 vitaliy.frolov.200117@gmail.com
                             </a>

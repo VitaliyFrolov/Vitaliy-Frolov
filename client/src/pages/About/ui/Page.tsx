@@ -10,11 +10,14 @@ import ContactData from "./ContactData";
 import WorkHistory from "./WorkHistiry";
 
 export default function Page () {
+    const [ loading, setLoading ] = useState(true);
     const [ stack, setStack ] = useState<any>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/get_stack/').then((res) => (setStack(res.data.stack[0])));
-    }, []);
+        axios.get('http://localhost:8000/api/get_stack/').then((res) => {(
+            setStack(res.data.stack[0])); 
+            setLoading(false)});
+    }, [loading]);
 
     return (
         <Container> 
@@ -75,27 +78,27 @@ export default function Page () {
                                 <ul className={styles.table__list}>
                                     <li className={styles.table__item}>
                                         <p className={styles.table__text}>
-                                            {stack.column_1}
+                                            {loading ? <span className={styles.loadingTag}>Loading...</span> : <>{stack.column_1}</>}
                                         </p>
                                     </li>
                                     <li className={styles.table__item}>
                                         <p className={styles.table__text}>
-                                            {stack.column_2} 
+                                            {loading ? <span>Loading...</span> : <>{stack.column_2}</>}
                                         </p>
                                     </li>
                                     <li className={styles.table__item}>
                                         <p className={styles.table__text}>
-                                            {stack.column_3}
+                                            {loading ? <span>Loading...</span> : <>{stack.column_3}</>}
                                         </p>
                                     </li>
                                     <li className={styles.table__item}>
                                         <p className={styles.table__text}>
-                                            {stack.column_4}
+                                            {loading ? <span>Loading...</span> : <>{stack.column_4}</>}
                                         </p>
                                     </li>
                                     <li className={styles.table__item}>
                                         <p className={styles.table__text}>
-                                            {stack.column_5}
+                                            {loading ? <span>Loading...</span> : <>{stack.column_5}</>}
                                         </p>
                                     </li>
                                 </ul>
@@ -108,7 +111,7 @@ export default function Page () {
                 <div className={styles.about__outro}>
                     <p className={styles.outro__text}>
                         <a
-                            href='https://github.com/VitaliyFrolov'
+                            href='https://github.com/VitaliyFrolov/Vitaliy-Frolov'
                             className={styles.outro__link}
                             target="_blank" 
                         >

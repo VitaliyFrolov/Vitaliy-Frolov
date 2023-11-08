@@ -1,5 +1,13 @@
 .logo {
     color: var(--svg-color);
     display: flex;
+    align-items: center;
     justify-content: center;
+
+    &__icn {
+        display: var(--light-logo);
+        &_dark {
+            display: var(--dark-logo);
+        }
+    }
 }

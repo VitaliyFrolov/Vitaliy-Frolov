@@ -21,6 +21,16 @@
     }
 }
 
+.works__loading {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 15px 0;
+}
+
+.loadingText {
+    color: var(--main-text-color);
+}
+
 .table__list {
     @media screen and (max-width: 1000px) {
         text-align: start;

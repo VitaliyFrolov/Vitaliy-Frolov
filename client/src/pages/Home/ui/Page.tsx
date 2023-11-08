@@ -63,7 +63,7 @@ export default function Page () {
                             <div className={styles.aboutMe}>
                                 <p className={styles.aboutMe__content}>
                                     In the summer of 2022, I connected with <br />
-                                    <span className={styles.bold}>web development into my life</span> and am still doing it today. I believe that technology makes people’s lives better and I want to contribute to this. I love with the web and everything connected with it!
+                                    <span className={styles.underline}>web development into my life</span> and am still doing it today. I believe that technology makes people’s lives better and I want to contribute to this. I love with the web and everything connected with it!
                                 </p>
                             </div>
                             <div className={styles.aboutMe}>
